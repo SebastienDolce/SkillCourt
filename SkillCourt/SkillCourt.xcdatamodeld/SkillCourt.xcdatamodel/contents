@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15C50" minimumToolsVersion="Automatic">
+    <entity name="Sequence" representedClassName="Sequence" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="routine" optional="YES" attributeType="Binary" syncable="YES"/>
+        <relationship name="skillCourtUser" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SkillCourtUser" inverseName="sequences" inverseEntity="SkillCourtUser" syncable="YES"/>
+    </entity>
+    <entity name="SkillCourtUser" representedClassName="SkillCourtUser" syncable="YES">
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="position" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="sequences" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Sequence" inverseName="skillCourtUser" inverseEntity="Sequence" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="SkillCourtUser" positionX="-389" positionY="-192" width="128" height="163"/>
+        <element name="Sequence" positionX="-54" positionY="45" width="128" height="88"/>
+    </elements>
+</model>
